@@ -232,7 +232,56 @@
         </header>
 
         <div class="post-content">
-            <h1 id="GitHub-Hexo-进行个人博客搭建"><a href="#GitHub-Hexo-进行个人博客搭建" class="headerlink" title="GitHub + Hexo 进行个人博客搭建"></a>GitHub + Hexo 进行个人博客搭建</h1><h2 id="一、前置准备"><a href="#一、前置准备" class="headerlink" title="一、前置准备"></a>一、前置准备</h2>
+            <h1 id="GitHub-Hexo-进行个人博客搭建"><a href="#GitHub-Hexo-进行个人博客搭建" class="headerlink" title="GitHub + Hexo 进行个人博客搭建"></a>GitHub + Hexo 进行个人博客搭建</h1><h2 id="一、前置准备"><a href="#一、前置准备" class="headerlink" title="一、前置准备"></a>一、前置准备</h2><ul>
+<li><p>git</p>
+<ul>
+<li>下载git bash</li>
+</ul>
+</li>
+<li><p>github账号</p>
+</li>
+<li><p>Node.js</p>
+<ul>
+<li>访问 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a> 下载并安装最新稳定版本</li>
+</ul>
+</li>
+<li><p>安装Hexo</p>
+<p><code>创建存放目录：mkdir myblog</code></p>
+<p><code>npm install -g hexo-cli</code></p>
+</li>
+<li><p>初始化Hexo</p>
+<p><code>hexo init</code></p>
+</li>
+<li><p>安装依赖</p>
+<p><code>npm install</code></p>
+</li>
+</ul>
+<h2 id="二、使用方法"><a href="#二、使用方法" class="headerlink" title="二、使用方法"></a>二、使用方法</h2><ol>
+<li><code>hexo new &quot;your blog page name&quot;</code><ol>
+<li>在mybolg（具体创建文件夹名字）目录下</li>
+<li>会在 <code>source/_posts</code> 目录下创建一个名为 <code>your blog page name.md</code> </li>
+<li><code>your blog page name.md</code> 会包含YAML front-matter，用来设置标签、标题、日期、分类等元数据</li>
+<li>TIPS：如果添加本地的.md文档，移动 <code>source/_posts</code>目录下，记得加YAML front-matter就和new出来的一样</li>
+</ol>
+</li>
+<li><code>hexo clean</code><ol>
+<li>清除之前生成的文件</li>
+</ol>
+</li>
+<li><code>hexo generate</code><ol>
+<li>生成静态文件</li>
+<li>可以使用简写<code>hexo g</code></li>
+<li>Hexo 会将你的 Markdown 文件、主题文件等转换为可以在浏览器中显示的静态网页</li>
+<li>这些文件默认会生成在 <code>public</code> 目录下</li>
+</ol>
+</li>
+<li><code>hexo deploy</code><ol>
+<li>部署到 GitHub Pages</li>
+</ol>
+</li>
+<li>访问<a href="https://yiguyigu.github.io/">https://yiguyigu.github.io</a></li>
+</ol>
+
         </div>
 
         
