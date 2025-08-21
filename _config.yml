@@ -7,7 +7,7 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: Yigu
 language: en
 timezone: ''
 
@@ -96,7 +96,40 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Chic
+
+# Theme Configuration
+## Override theme settings without modifying theme files
+theme_config:
+  # Header
+  navname: Yigu's Blog
+  # Profile
+  nickname: Yigu
+
+  ### this variable is MarkDown form.
+  description: "**Stay hungry, stay foolish.** <br>Keep learning, keep growing."
+  avatar: /catcure.png
+  
+  # Main menu navigation
+  links:
+    Blog: /archives
+    Resume: 
+    ZhiHu: https://www.zhihu.com/people/wu-yu-97-88-76
+    Reddit: https://www.reddit.com/user/Pretend-Bed5981/
+    Github: https://github.com/yiguyigu
+
+  post_copyright_slogan_text: Do you believe in <strong>DESTINY</strong>?
+
+  # Post wordcount display settings
+  # Dependencies: https://github.com/willin/hexo-wordcount
+  post_wordcount:
+    item_text: true
+    wordcount: true         # Word count per post
+    min2read: true          # Reading time per post
+    totalcount: false       # Word count for the whole site
+
+  post_wordcount_enable: true
+  post_min2read_enable: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
