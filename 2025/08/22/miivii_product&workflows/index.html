@@ -13,7 +13,7 @@
 
 
 
-<title>How to get Jetpack6.2 source | Hexo</title>
+<title>MIIVII Product – MIIVII SDK | Hexo</title>
 
 
 
@@ -203,7 +203,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">How to get Jetpack6.2 source</h1>
+            <h1 class="post-title">MIIVII Product – MIIVII SDK</h1>
             
                 <div class="post-meta">
                     
@@ -212,7 +212,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">July 11, 2025&nbsp;&nbsp;0:00:00</a>
+                        Date: <a href="#">August 22, 2025&nbsp;&nbsp;8:05:16</a>
                         </span>
                     
                     
@@ -228,46 +228,18 @@
         </header>
 
         <div class="post-content">
-            <h1 id="How-to-get-Jetpack-6-2-source"><a href="#How-to-get-Jetpack-6-2-source" class="headerlink" title="How to get Jetpack 6.2 source"></a>How to get Jetpack 6.2 source</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h2><ul>
-<li><p>Download the latest Jetson Linux release package and sample file system for your Jetson developer kit from <a target="_blank" rel="noopener" href="https://developer.nvidia.com/linux-tegra">Jetson Linux Archive</a>.</p>
-</li>
-<li><p>You can look the page about quickly start <a target="_blank" rel="noopener" href="https://docs.nvidia.com/jetson/archives/r36.4.4/DeveloperGuide/IN/QuickStart.html">nv_quickly_start_page</a>.</p>
-</li>
-<li><p>if you just need kernel source, you can not download sample_rootfs.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v4.4/release/Jetson_Linux_r36.4.4_aarch64.tbz2</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar xf Jetson_Linux_r36.4.4_aarch64.tbz2</span></span><br></pre></td></tr></table></figure></li>
+            <h1 id="MIIVII-Product-–-MIIVII-SDK"><a href="#MIIVII-Product-–-MIIVII-SDK" class="headerlink" title="MIIVII Product – MIIVII SDK"></a>MIIVII Product – MIIVII SDK</h1><h2 id="introduce"><a href="#introduce" class="headerlink" title="introduce"></a>introduce</h2><p>miivii 交付的产品可以大致分为三类：硬件设备、软件SDK、售后服务</p>
+<p>硬件设备</p>
+<ul>
+<li>主要是基于nvidia的模组来进行垂直领域的硬件设计（比如针对无人驾驶领域，增加多路GMSL接口，增加多路网卡接口等）</li>
+<li>设计这个过程需要软件参加评审，得到认可才能投入生产计划</li>
 </ul>
-<h2 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h2><ul>
-<li>Get kernel source, but you have two way to do that.</li>
+<p>软件bsp</p>
+<ul>
+<li>负责公司新版本的镜像开发，并完成自动化集成部署</li>
+<li>提供售后，解决一些需求</li>
 </ul>
-<h3 id="1-Sync-the-sources-using-Git"><a href="#1-Sync-the-sources-using-Git" class="headerlink" title="1. Sync the sources using Git"></a>1. Sync the sources using Git</h3><ul>
-<li><p>Use this way, you need know the <release-tag>, it can be know form <a target="_blank" rel="noopener" href="https://docs.nvidia.com/jetson/archives/r36.4.4/ReleaseNotes/Jetson_Linux_Release_Notes_r36.4.4.pdf">Release Note</a>.</p>
-</li>
-<li><p>Such as <code>jetson_36.4.4</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> /Linux_for_Tegra/source</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./source_sync.sh -k -t &lt;release-tag&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>If you want to learn about more, you can reference <a target="_blank" rel="noopener" href="https://docs.nvidia.com/jetson/archives/r36.4.4/DeveloperGuide/SD/Kernel/KernelCustomization.html">Kernel Customization</a>.</p>
-</li>
-<li><p>&#x3D;&#x3D;tips&#x3D;&#x3D;:  the way sometime is very low.</p>
-</li>
-</ul>
-<h3 id="2-download-the-kernel-source-files-and-manually-extract-them"><a href="#2-download-the-kernel-source-files-and-manually-extract-them" class="headerlink" title="2. download the kernel source files and manually extract them"></a>2. download the kernel source files and manually extract them</h3><ul>
-<li><p>Download the Jetson Linux source files from <a target="_blank" rel="noopener" href="https://developer.nvidia.com/embedded/jetson-linux">Jetson Linux</a>, choice <a target="_blank" rel="noopener" href="https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v4.4/sources/public_sources.tbz2">Driver Package (BSP) Sources</a></p>
-</li>
-<li><p>Extract the <code>.tbz2</code> file:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar xf public_sources.tbz2 -C &lt;install-path&gt;/Linux_for_Tegra/..</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Extract the kernel and the NVIDIA out-of-tree modules source files:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> &lt;install-path&gt;/Linux_for_Tegra/source</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar xf kernel_src.tbz2</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar xf kernel_oot_modules_src.tbz2</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar xf nvidia_kernel_display_driver_source.tbz2</span></span><br></pre></td></tr></table></figure>
-
-<p>This extracts the kernel source to the <code>kernel/</code> subdirectory, and the NVIDIA out-of-tree kernel modules sources to the current directory.</p>
-</li>
-<li><p>&#x3D;&#x3D;tips&#x3D;&#x3D;: the way will download many compressed file.</p>
-<p>You can use a shell comman to slove this:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">find . -<span class="built_in">type</span> f ! -name <span class="string">&quot;*.tbz2&quot;</span> ! -name <span class="string">&quot;*.sha1sum&quot;</span> ! -name <span class="string">&quot;*.txt&quot;</span> -<span class="built_in">exec</span> <span class="built_in">cp</span> &#123;&#125; ~/backup/ \;</span></span><br></pre></td></tr></table></figure>
-
-<p>up way is bad, because it make all file stay one directour.</p>
-</li>
-</ul>
+<h2 id="software-workflow"><a href="#software-workflow" class="headerlink" title="software workflow"></a>software workflow</h2><p>基于模组的软件生态，原料是：simpleRootfs + bootloader + toolchain</p>
 
         </div>
 
@@ -282,7 +254,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2025/07/11/jetpack6.2_source_get_way/">http://example.com/2025/07/11/jetpack6.2_source_get_way/</a></span>
+                        <span><a href="http://example.com/2025/08/22/miivii_product&workflows/">http://example.com/2025/08/22/miivii_product&workflows/</a></span>
                     </p>
                 
                 
@@ -308,8 +280,6 @@
                     
                         <a href="/tags/MIIVII/"># MIIVII</a>
                     
-                        <a href="/tags/nvidia/"># nvidia</a>
-                    
                         
                 </span>
             </div>
@@ -321,10 +291,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2025/08/22/miivii_product&workflows/">MIIVII Product – MIIVII SDK</a>
             
-            
-            <a class="next" rel="next" href="/2025/05/25/How-to-Quickly-Setup-Hexo-from-GitHub/">How to Quickly Setup Hexo from GitHub</a>
+            <a class="next" rel="next" href="/2025/07/11/jetpack6.2_source_get_way/">How to get Jetpack6.2 source</a>
             
         </section>
 
