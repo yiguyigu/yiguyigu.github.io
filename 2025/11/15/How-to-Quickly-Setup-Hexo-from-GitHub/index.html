@@ -212,7 +212,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">May 25, 2025&nbsp;&nbsp;23:00:06</a>
+                        Date: <a href="#">November 15, 2025&nbsp;&nbsp;23:00:06</a>
                         </span>
                     
                     
@@ -229,19 +229,26 @@
 
         <div class="post-content">
             <h1 id="How-to-Quickly-Setup-Hexo-from-GitHub"><a href="#How-to-Quickly-Setup-Hexo-from-GitHub" class="headerlink" title="How to Quickly Setup Hexo from GitHub"></a>How to Quickly Setup Hexo from GitHub</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>这里主要是使用不同分支来区分静态文件和源文件<ul>
-<li>main是静态</li>
-<li>source是源文件</li>
+<li>这里主要是使用不同分支来区分静态文件和源文件：<ul>
+<li><code>main</code> 是静态</li>
+<li><code>source</code> 是源文件</li>
 </ul>
 </li>
 </ul>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:yiguyigu/yiguyigu.github.io.git</span><br></pre></td></tr></table></figure>
+
 <h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h3><ul>
-<li>同步子模块  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure></li>
+<li>同步子模块：</li>
 </ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure>
+
 <h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h3><ul>
 <li>在 <code>./source/_posts</code> 目录下添加你想要显示到博客网站的内容</li>
 </ul>
+<h2 id="环境准备（optional）"><a href="#环境准备（optional）" class="headerlink" title="环境准备（optional）"></a>环境准备（optional）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install -y nodejs</span><br><span class="line"></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新-Blog-步骤"><a href="#更新-Blog-步骤" class="headerlink" title="更新 Blog 步骤"></a>更新 Blog 步骤</h2><p>首先需要在 <code>source/_posts/</code> 目录下添加 <code>.md</code> 文档，必要时记得推送到 repo。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># You can use only the initials of each word to simplify commands.</span></span><br><span class="line"></span><br><span class="line">npx hexo clean</span><br><span class="line"></span><br><span class="line">npx hexo generate</span><br><span class="line"></span><br><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -256,7 +263,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2025/05/25/How-to-Quickly-Setup-Hexo-from-GitHub/">http://example.com/2025/05/25/How-to-Quickly-Setup-Hexo-from-GitHub/</a></span>
+                        <span><a href="http://example.com/2025/11/15/How-to-Quickly-Setup-Hexo-from-GitHub/">http://example.com/2025/11/15/How-to-Quickly-Setup-Hexo-from-GitHub/</a></span>
                     </p>
                 
                 
@@ -293,10 +300,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2025/07/11/jetpack6.2_source_get_way/">How to get Jetpack6.2 source</a>
             
-            
-            <a class="next" rel="next" href="/2025/05/22/hello-world/">Hello World</a>
+            <a class="next" rel="next" href="/2025/11/07/miivii_product&workflows/">MIIVII Product – MIIVII SDK</a>
             
         </section>
 
